@@ -1,4 +1,4 @@
-module SampleBlog
+module SampleWink
   class App < Padrino::Application
     register SassInitializer
     use ActiveRecord::ConnectionAdapters::ConnectionManagement
@@ -8,11 +8,11 @@ module SampleBlog
     enable :sessions
 
     get "/" do
-      "Hello World!"
+      "Hello yo!"
     end
 
-    get :about, :map => '/about_us' do
-      render :haml, "%p This is a sample blog created to demonstrate how Padrino works!"
-    end
+   get :about, :map => '/about_us' do
+     render :haml, "%This sample start for yada yada!"
+   end
   end
 end

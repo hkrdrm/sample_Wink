@@ -1,3 +1,4 @@
+# app/views/layouts/application.haml
 !!! Strict
 %html
   %head
@@ -14,7 +15,7 @@
     #container
       #main= yield
       #sidebar
-        = form_tag url_for(:posts, :index), :method => 'get'  do
+        - form_tag url_for(:posts, :index), :method => 'get'  do
           Search for:
           = text_field_tag 'query', :value => params[:query]
           = submit_tag 'Search'
@@ -34,4 +35,4 @@
           %li Item 2 - Lorem ipsum dolorum itsum estem
           %li Item 3 - Lorem ipsum dolorum itsum estem
     #footer
-      Copyright &copy; 2009-2010 Padrino
+      Copyright (c) 2009-2010 Padrino
